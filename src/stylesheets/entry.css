@@ -1,0 +1,6 @@
+.Entry {
+    border: 2px solid black;
+    margin: 2%;
+    padding: 2%;
+    display: flex;
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
+import Entry from './components/entry';
+import './stylesheets/App.css';
 
 class App extends Component {
   render() {
@@ -8,6 +9,7 @@ class App extends Component {
         <header>
           <h1>Build Your Own Eurovision Rankings Predictions</h1>
         </header>
+        <Entry songTitle='SHUM' artist='Go_A' country='Ukraine' rank="1" />
       </div>
     );
   }

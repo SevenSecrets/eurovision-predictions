@@ -14,10 +14,10 @@ class Entry extends Component {
     render() {
         return(
             <div className='Entry'>
-                <div class='country'>{this.state.country}</div>
-                <div class='song-title'>{this.state.songTitle}</div>
-                <div class='artist'>{this.state.artist}</div>
-                <div class='rank'>{this.state.rank}</div>
+                <div className='country'><h2>{this.state.country}</h2></div>
+                <div className='song-title'><h2>Song: {this.state.songTitle}</h2></div>
+                <div className='artist'><h2>Artist: {this.state.artist}</h2></div>
+                <div className='rank'><h2>#{this.state.rank}</h2></div>
             </div>
         );
     }

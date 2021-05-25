@@ -16,4 +16,4 @@ An app for making your own Eurovision rankings/predicitions, because there didn'
 
 Created with React via create-react-app. Intended to allow users to add entries to a list and then drag and drop them into the order in which they think they will rank. Currently not hosted anywhere - yet.
 
-Run tests using `npm test`, or `npm test -- --coverage` to see test coverage. Run the development version of the app with `npm start` or `npm run build` to properly build the app in production mode.
+Run tests using `npm test`, or `npm test -- --coverage` to see test coverage. Run the development version of the app with `npm start` or `npm run build` to properly build t

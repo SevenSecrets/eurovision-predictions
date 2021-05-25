@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../stylesheets/entryForm.css'
 
 class EntryForm extends Component {
     constructor(props) {
@@ -28,18 +29,16 @@ class EntryForm extends Component {
         return(
             <div className="EntryForm">
                 <form onSubmit={this.handleSubmit} >
-                    <h3>Add New Entry:</h3>
-                    <label>
+                    <h2 className='form-title'>Add New Entry:</h2>
+                    <label className='song-title-input'>
                         Song Title: 
                         <input type='text' name='songTitle' onChange={ this.handleInputChange } />
                     </label>
-                    <br/>
-                    <label>
+                    <label className='artist-input'>
                         Artist: 
                         <input type='text' name='artist' onChange={ this.handleInputChange } />
                     </label>
-                    <br/>
-                    <label>
+                    <label className='country-input'>
                         Country: 
                         <select name='country' onChange={ this.handleInputChange }>
                             {/* TODO: extract this list to reduce clutter */}
@@ -84,8 +83,7 @@ class EntryForm extends Component {
                             <option value='United Kingdom' >United Kingdom</option>
                         </select>
                     </label>
-                    <br/>
-                    <input type='submit' value='Submit' data-testid='form-submit' />
+                    <input className='submit' type='submit' value='Add' data-testid='form-submit' />
                 </form>
             </div>
         );

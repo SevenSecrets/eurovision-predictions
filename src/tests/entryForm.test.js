@@ -5,7 +5,7 @@ it('renders without errors', () => {
     render(<EntryForm />);
 });
 
-it('accepts entry into the form', () => {
+it('accepts entry into the form and submits', () => {
     render(<EntryForm />);
     const songTitleField = screen.getByLabelText(/Song Title/i);
     const artistField = screen.getByLabelText(/Artist/i);

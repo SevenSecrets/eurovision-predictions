@@ -6,7 +6,7 @@ it('renders without errors', () => {
 });
 
 it('accepts entry into the form and submits', () => {
-    render(<EntryForm />);
+    render(<EntryForm entries={[]} />);
     const songTitleField = screen.getByLabelText(/Song Title/i);
     const artistField = screen.getByLabelText(/Artist/i);
     const countryField = screen.getByLabelText(/Country/i);

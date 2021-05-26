@@ -8,7 +8,8 @@ class EntryForm extends Component {
         this.state = {
             songTitle: '',
             artist: '',
-            country: ''
+            country: '',
+            entries: props.entries
         }
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -20,8 +21,15 @@ class EntryForm extends Component {
     }
 
     handleSubmit(e) {
+        this.state.entries.push({
+            songTitle: this.state.songTitle,
+            artist: this.state.artist,
+            country: this.state.country
+        });
+
         // Just for the sake of logging atm
-        console.log('submitted: ' + this.state.songTitle + ' ' + this.state.artist + ' ' + this.state.country);
+        console.log('submitted: ' + this.state.entries);
+        
         e.preventDefault();
     }
 

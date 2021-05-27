@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Entry from './entry';
 import '../stylesheets/entryForm.css'
 
 class EntryForm extends Component {
@@ -21,14 +22,7 @@ class EntryForm extends Component {
     }
 
     handleSubmit(e) {
-        this.state.entries.push({
-            songTitle: this.state.songTitle,
-            artist: this.state.artist,
-            country: this.state.country
-        });
-
-        // Just for the sake of logging atm
-        console.log('submitted: ' + this.state.entries);
+        console.log('submitted: ' + e.target);
 
         e.preventDefault();
     }
@@ -95,13 +89,11 @@ class EntryForm extends Component {
                 </form>
                 <div className='entries' >
                     <ul>
-                        {
-                            this.state.entries.map((entry, i) => 
-                                <li key={i}>
-                                    <Entry songTitle={entry.songTitle} artist={entry.artist} country={entry.country} rank={i} />
-                                </li>
-                            )
-                        }
+                        {this.state.entries.map((entry, i) => 
+                            <li key={i}>
+                                <Entry songTitle={entry.songTitle} artist={entry.artist} country={entry.country} rank={i} />
+                            </li>
+                        )}
                     </ul>
                 </div>
             </div>

@@ -9,7 +9,7 @@ class EntryForm extends Component {
             songTitle: '',
             artist: '',
             country: '',
-            entries: props.entries
+            entries: []
         }
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -29,7 +29,7 @@ class EntryForm extends Component {
 
         // Just for the sake of logging atm
         console.log('submitted: ' + this.state.entries);
-        
+
         e.preventDefault();
     }
 
@@ -93,6 +93,17 @@ class EntryForm extends Component {
                     </label>
                     <input className='submit' type='submit' value='Add' data-testid='form-submit' />
                 </form>
+                <div className='entries' >
+                    <ul>
+                        {
+                            this.state.entries.map((entry, i) => 
+                                <li key={i}>
+                                    <Entry songTitle={entry.songTitle} artist={entry.artist} country={entry.country} rank={i} />
+                                </li>
+                            )
+                        }
+                    </ul>
+                </div>
             </div>
         );
     }

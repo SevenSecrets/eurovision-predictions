@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Ranking from './components/ranking';
+import EntryForm from './components/entryForm';
 import './stylesheets/App.css';
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
         <header>
           <h1>Build Your Own Eurovision Rankings Predictions</h1>
         </header>
-        <Ranking />
+        <EntryForm />
       </div>
     );
   }

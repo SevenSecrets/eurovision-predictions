@@ -22,7 +22,9 @@ class EntryForm extends Component {
     }
 
     handleSubmit(e) {
-        console.log('submitted: ' + e.target);
+        
+
+        console.log('submitted: ' + );
 
         e.preventDefault();
     }

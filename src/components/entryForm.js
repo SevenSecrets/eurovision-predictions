@@ -12,19 +12,23 @@ function EntryForm() {
 
     return(
         <div className="EntryForm">
-            <form onSubmit={() => dispatch(add())} >
+            <form onSubmit={() => dispatch(add({
+                songTitle: songTitle,
+                artist: artist,
+                country: country
+            }))} >
                 <h2 className='form-title'>Add New Entry:</h2>
                 <label className='song-title-input'>
                     Song Title: 
-                    <input type='text' name='songTitle' />
+                    <input type='text' name='songTitle' onChange={ e => setSongTitle(e.target.value) } />
                 </label>
                 <label className='artist-input'>
                     Artist: 
-                    <input type='text' name='artist' />
+                    <input type='text' name='artist' onChange={ e => setArtist(e.target.value) } />
                 </label>
                 <label className='country-input'>
                     Country: 
-                    <select name='country'>
+                    <select name='country' onChange={ e => setCountry(e.target.value) }>
                         {/* TODO: extract this list to reduce clutter */}
                         <option value='Albania' >Albania</option>
                         <option value='Australia' >Australia</option>

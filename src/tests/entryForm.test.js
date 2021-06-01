@@ -1,4 +1,4 @@
-import { screen, render, getAllByTestId, getByLabelText, fireEvent } from '@testing-library/react';
+import { screen, render, getAllByTestId, getByLabelText, fireEvent } from './test-utils';
 import EntryForm from '../components/entryForm';
 
 it('renders without errors', () => {

@@ -1,4 +1,4 @@
-import { screen, render } from '@testing-library/react';
+import { screen, render } from './test-utils';
 import Entry from '../components/entry';
 
 it('renders with props', () => {

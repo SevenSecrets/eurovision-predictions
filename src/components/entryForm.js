@@ -10,13 +10,19 @@ function EntryForm() {
     const [artist, setArtist] = useState('');
     const [country, setCountry] = useState('');
 
+    const handleSubmit = (e) => {
+        dispatch(add({
+            songTitle: songTitle,
+            artist: artist,
+            country: country
+        }))
+
+        e.preventDefault();
+    }
+
     return(
         <div className="EntryForm">
-            <form onSubmit={() => dispatch(add({
-                songTitle: songTitle,
-                artist: artist,
-                country: country
-            }))} >
+            <form onSubmit={handleSubmit} >
                 <h2 className='form-title'>Add New Entry:</h2>
                 <label className='song-title-input'>
                     Song Title: 
